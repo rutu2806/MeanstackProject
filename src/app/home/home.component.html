@@ -1,0 +1,572 @@
+<div class="container-fluid">
+    <!-- Navbar -->
+    <div class="row d-flex align-items-center navbartop"
+        style="height: 50px; background-color: rgb(221, 221, 221); position: sticky; top: 0; z-index: 9999;">
+        <!-- navbar-left -->
+        <div class="col-4 col-md-4" style="padding-left: 20px; display: flex; justify-items: center;">
+            <div>
+                <a>
+                    <fa-icon [icon]="faFacebook" style="color: rgb(53, 120, 245); font-size: 33px; display: flex;">
+                    </fa-icon>
+                </a>
+            </div>
+            <div style="padding-left: 10px;">
+                <input type="text" class="form-control" placeholder="Search Facebook"
+                    style="display: flex; border-radius: 20px; width: 350px;">
+            </div>
+        </div>
+        <!-- navbar middle -->
+        <div class="col-7 d-flex">
+            <a>
+                <fa-icon [icon]="faHome" style="color: rgb(53, 120, 245); font-size: 25px;"></fa-icon>
+            </a>
+            <a>
+                <fa-icon [icon]="faBell" style="color: grey; font-size: 25px; padding-left: 60px;"></fa-icon>
+            </a>
+            <a>
+                <fa-icon [icon]="faTv" style="color: grey; font-size: 25px; padding-left: 10px; padding-left: 60px;">
+                </fa-icon>
+            </a>
+            <a>
+                <fa-icon [icon]="faUser" style="color: grey; font-size: 25px; padding-left: 60px;"></fa-icon>
+            </a>
+            <a>
+                <fa-icon [icon]="faStore" style="color: grey; font-size: 25px; padding-left: 60px;"></fa-icon>
+            </a>
+            <a>
+                <fa-icon [icon]="faUsers" style="color: grey; font-size: 25px; padding-left: 60px;"></fa-icon>
+            </a>
+            <a>
+                <fa-icon [icon]="faFacebookMessenger" style="color: grey; font-size: 25px; padding-left: 60px;">
+                </fa-icon>
+            </a>
+        </div>
+        <!-- navbar right -->
+        <div class="col-1 d-flex" style="padding-right: 8px;">
+            <span class="dot">
+                <div (click)="logout()">
+                    <fa-icon [icon]="faCog" style="color: grey; font-size: 25px; padding-left: 1vh;">
+                    </fa-icon>
+                    LOGOUT
+                </div>
+
+
+
+            </span>
+        </div>
+    </div>
+    <!-- Body PArt -->
+    <div class="row mt-1">
+        <!-- left part -->
+        <div class="col-3 bg-light sidenavL">
+            <!-- Profile Picture -->
+            <div class="mt-3">
+                <img src="../assets/pp.jpg" alt="" srcset="" style="height: 200px; width: 300px; border-radius: 30px;">
+            </div>
+            <!-- User Name -->
+            <div class="mt-2 d-flex align-items-center justify-content-center">
+                <strong style="font-size: 30px; font-weight: 600; color: rgb(53, 120, 245);">Sachin Kodag</strong>
+            </div>
+            <hr>
+            <!-- Intro -->
+            <div class="mt-3">
+                <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                    <div style="display: flex;">
+                        <fa-icon [icon]="faGlobeAsia" style="color: rgb(53, 120, 245); font-size: 20px; display: flex;">
+                        </fa-icon>
+                    </div>
+                    <div style="display: flex; margin-left: 10px;">
+                        <h5>Intro</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- intro detial -->
+            <div class="mt-1 d-flex align-items-center justify-content-center" style="flex-direction: column;">
+                <div class="d-flex mt-2">
+                    <div class="d-flex mt-1">
+                        <fa-icon [icon]="faBriefcase" style="color: grey; font-size: 15px; display: flex;"></fa-icon>
+                    </div>
+                    <div class="d-flex ml-2">Worked at</div>
+                    <div class="d-flex ml-2 text-info">Facebook</div>
+                </div>
+                <div class="d-flex mt-2">
+                    <div class="d-flex mt-1">
+                        <fa-icon [icon]="faGraduationCap" style="color: grey; font-size: 15px; display: flex;">
+                        </fa-icon>
+                    </div>
+                    <div class="d-flex ml-2">Studied at</div>
+                    <div class="d-flex ml-2 text-info">CDAC, Mumbai</div>
+                </div>
+                <div class="d-flex mt-2">
+                    <div class="d-flex mt-1">
+                        <fa-icon [icon]="faHome" style="color: grey; font-size: 15px; display: flex;"></fa-icon>
+                    </div>
+                    <div class="d-flex ml-2">Lives in</div>
+                    <div class="d-flex ml-2 text-info">Navi Mumbai</div>
+                </div>
+                <div class="d-flex mt-2">
+                    <div class="d-flex mt-1">
+                        <fa-icon [icon]="faMapMarkerAlt" style="color: grey; font-size: 15px; display: flex;"></fa-icon>
+                    </div>
+                    <div class="d-flex ml-2">From</div>
+                    <div class="d-flex ml-2 text-info">Navi Mumbai</div>
+                </div>
+                <div class="d-flex mt-2">
+                    <div class="d-flex mt-1">
+                        <fa-icon [icon]="faHeart" style="color: grey; font-size: 15px; display: flex;"></fa-icon>
+                    </div>
+                    <div class="d-flex ml-2">Single</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle part -->
+        <div class="col-6 mt-2 middle" style="height: 100vh;">
+            <!-- Stories bar -->
+            <div class="col-12" style="display: flex; justify-content: space-between;">
+                <p style="font-size: 20px; font-weight: 450; display: flex;">Stories</p>
+                <a href="#">
+                    <p style="color: rgb(44, 137, 243); font-size: 15px; font-weight: 550; display: flex;">See All</p>
+                </a>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <a href="#"><img src="https://picsum.photos/id/237/100/200" alt="" srcset=""
+                        style="border-radius: 10px;"></a>
+                <a href="#"><img src="https://picsum.photos/id/232/100/200" alt="" srcset=""
+                        style="border-radius: 10px;"></a>
+                <a href="#"><img src="https://picsum.photos/id/233/100/200" alt="" srcset=""
+                        style="border-radius: 10px;"></a>
+                <a href="#"><img src="https://picsum.photos/id/234/100/200" alt="" srcset=""
+                        style="border-radius: 10px;"></a>
+                <a href="#"><img src="https://picsum.photos/id/231/100/200" alt="" srcset=""
+                        style="border-radius: 10px;"></a>
+                <a href="#"><img src="https://picsum.photos/id/230/100/200" alt="" srcset=""
+                        style="border-radius: 10px;"></a>
+            </div>
+
+            <!-- Post Box -->
+            <div class="col-12 mt-3 card">
+                <div class="card-header">Create Post</div>
+
+                <div class="card-body">
+                    <textarea [(ngModel)]="post.postValue" class="form-control beautify-textarea" cols="100" rows="2"
+                        placeholder="Write something here.."></textarea>
+                </div>
+
+                <div class="card-footer pb-0">
+                    <a (click)="postText()" class="badge badge-pill badge-primary" style="font-size: medium">
+                        Text
+                    </a>
+
+                    <label class="badge badge-pill badge-info ml-1" style="font-size: medium; cursor: pointer;">
+                        Image
+                        <input (change)="postImage($event)" type="file" style="display: none">
+                    </label>
+
+                    <label class="badge badge-pill badge-success ml-1" style="font-size: medium; cursor: pointer;">
+                        Video
+                        <input (change)="postVideo($event)" type="file" style="display: none">
+                    </label>
+                </div>
+            </div>
+
+            <ng-container *ngFor="let item of postList; let itemIndex = index;">
+                <!-- only Post Text-->
+                <div *ngIf="item.postType == 'TEXT'" class="col-12 mt-3"
+                    style="height: 48vh; display: flex; flex-direction: column; background-color: white; border-radius: 10px;">
+
+                    <div>
+
+                        <!-- PP, Name, time, 3 dot -->
+                        <div class="col-12"
+                            style="display: flex; flex-direction: column; justify-content: center; justify-content: space-between;">
+                            <!-- Left Part -->
+                            <div class="col-10 d-flex">
+                                <!-- pp -->
+                                <div>
+                                    <fa-icon [icon]="faUserCircle" style="color: grey; font-size: 60px;"></fa-icon>
+                                </div>
+                                <!-- name, time -->
+                                <div class="ml-3 mt-3">
+                                    <strong>
+                                        <p>Sachin Kodag</p>
+                                    </strong>
+                                    <p>12 mins . <fa-icon [icon]="faUserFriends" style="color: grey; font-size: 15px;">
+                                        </fa-icon>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- <div class="col-2 d-flex">
+            <fa-icon [icon]="faEllipsisH" style="color: grey; font-size: 20px;"></fa-icon>
+          </div> -->
+                        </div>
+
+                        <!-- Text-Post -->
+                        <div class="col-12 mt-1" style="display: flex; justify-content: center; justify-items: center;">
+                            <p style="font-size: 1rem; font-weight: bold; font-family: cursive;">{{item.postValue}}
+                            </p>
+                        </div>
+
+                        <!-- Like, Comment, Share -->
+                        <div class="col-12 mt-2 d-flex justify-content-center">
+                            <div class="col-10" style="display: flex; justify-content: space-between;">
+                                <div style="display: flex; flex-direction: column; cursor: pointer;">
+                                    <span class="text-muted badge-light rounded p-1"
+                                        style="font-size: small; padding-left: 0px; background-color: white;">{{item.likeCount}}
+                                        Likes</span>
+                                    <span>
+                                        <div (click)="likeCount(item)" style="display: flex;">
+                                            <fa-icon [icon]="faThumbsUp" style="font-size: 20px; display: flex;">
+                                            </fa-icon>
+                                            <div style="display: flex; margin-left: 4px;">Like</div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; cursor: pointer;">
+                                    <span class="text-muted badge-light rounded p-1"
+                                        style="font-size: small; background-color: white;">{{item.commentList.length}}
+                                        Commentes</span>
+                                    <span>
+                                        <div style="display: flex;">
+                                            <fa-icon [icon]="faCommentAlt" style="font-size: 20px; display: flex;">
+                                            </fa-icon>
+                                            <div (click)="showComment()" style="display: flex; margin-left: 4px;">
+                                                Comment</div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; cursor: pointer;">
+                                    <span class="text-muted badge-light rounded p-1"
+                                        style="font-size: small; background-color: white;">{{item.shareCount}}
+                                        Shares</span>
+                                    <span>
+                                        <div (click)="shareCount(item)" style="display: flex;">
+                                            <fa-icon [icon]="faShare" style="font-size: 20px; display: flex;">
+                                            </fa-icon>
+                                            <div style="display: flex; margin-left: 4px;">Share</div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; cursor: pointer;">
+                                    <span>
+                                        <div class="mt-4">
+                                            <a (click)="deletePost(itemIndex)" style="font-size: 15px; display: flex;"
+                                                class="text-light badge badge-pill badge-danger ml-1">Delete</a>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comment -->
+                        <div class="col-12" style="display: flex; flex-direction: column;">
+                            <div>
+                                <hr style="width: 90%; margin-left: 5%;">
+                            </div>
+                            <div style="display: flex">
+                                <fa-icon [icon]="faUserCircle"
+                                    style="color: grey; font-size: 30px; padding-right: 8px;"></fa-icon>
+                                <input type="text" placeholder="  Write a comment..."
+                                    style="margin-right: 8px; width: 500px; border: none; outline: none; color: grey; border-radius: 20px; background-color: rgb(228, 228, 228);">
+                                <input (click)="addComment(item)" class="btn" type="button" value="Post"
+                                    style="color: white; background-color: rgb(44, 137, 243);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Only Image -->
+                <div *ngIf="item.postType == 'IMAGE'" class="col-12 mt-3"
+                    style="height: 89vh; display: flex; flex-direction: column; background-color: white; border-radius: 10px;">
+
+                    <div>
+
+                        <!-- PP, Name, time, 3 dot -->
+                        <div class="col-12"
+                            style="display: flex; flex-direction: column; justify-content: center; justify-content: space-between;">
+                            <!-- Left Part -->
+                            <div class="col-10 d-flex">
+                                <!-- pp -->
+                                <div>
+                                    <fa-icon [icon]="faUserCircle" style="color: grey; font-size: 60px;"></fa-icon>
+                                </div>
+                                <!-- name, time -->
+                                <div class="ml-3 mt-3">
+                                    <strong>
+                                        <p>Sachin Kodag</p>
+                                    </strong>
+                                    <p>12 mins . <fa-icon [icon]="faUserFriends" style="color: grey; font-size: 15px;">
+                                        </fa-icon>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- <div class="col-2 d-flex">
+            <fa-icon [icon]="faEllipsisH" style="color: grey; font-size: 20px;"></fa-icon>
+          </div> -->
+                        </div>
+
+                        <!-- Image, Video -->
+                        <div class="col-12 ml-0 mr-0">
+                            <img [src]="item.postValueMedia" alt="" srcset=""
+                                style="width: 100%; height: 300px; object-fit: cover;">
+                        </div>
+
+                        <!-- Like, Comment, Share -->
+                        <div class="col-12 mt-2 d-flex justify-content-center">
+                            <div class="col-10" style="display: flex; justify-content: space-between;">
+                                <div style="display: flex; flex-direction: column; cursor: pointer;">
+                                    <span class="text-muted badge-light rounded p-1"
+                                        style="font-size: small; padding-left: 0px; background-color: white;">{{item.likeCount}}
+                                        Likes</span>
+                                    <span>
+                                        <div (click)="likeCount(item)" style="display: flex;">
+                                            <fa-icon [icon]="faThumbsUp" style="font-size: 20px; display: flex;">
+                                            </fa-icon>
+                                            <div style="display: flex; margin-left: 4px;">Like</div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; cursor: pointer;">
+                                    <span class="text-muted badge-light rounded p-1"
+                                        style="font-size: small; background-color: white;">{{item.commentList.length}}
+                                        Commentes</span>
+                                    <span>
+                                        <div style="display: flex;">
+                                            <fa-icon [icon]="faCommentAlt" style="font-size: 20px; display: flex;">
+                                            </fa-icon>
+                                            <div (click)="showComment()" style="display: flex; margin-left: 4px;">
+                                                Comment</div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; cursor: pointer;">
+                                    <span class="text-muted badge-light rounded p-1"
+                                        style="font-size: small; background-color: white;">{{item.shareCount}}
+                                        Shares</span>
+                                    <span>
+                                        <div (click)="shareCount(item)" style="display: flex;">
+                                            <fa-icon [icon]="faShare" style="font-size: 20px; display: flex;">
+                                            </fa-icon>
+                                            <div style="display: flex; margin-left: 4px;">Share</div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; cursor: pointer;">
+                                    <span>
+                                        <div class="mt-4">
+                                            <a (click)="deletePost(itemIndex)" style="font-size: 15px; display: flex;"
+                                                class="text-light badge badge-pill badge-danger ml-1">Delete</a>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comment -->
+                        <div class="col-12" style="display: flex; flex-direction: column;">
+                            <div>
+                                <hr style="width: 90%; margin-left: 5%;">
+                            </div>
+                            <div style="display: flex">
+                                <fa-icon [icon]="faUserCircle"
+                                    style="color: grey; font-size: 30px; padding-right: 8px;"></fa-icon>
+                                <input type="text" placeholder="  Write a comment..."
+                                    style="margin-right: 8px; width: 500px; border: none; outline: none; color: grey; border-radius: 20px; background-color: rgb(228, 228, 228);">
+                                <input (click)="addComment(item)" class="btn" type="button" value="Post"
+                                    style="color: white; background-color: rgb(44, 137, 243);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Only Video -->
+                <div *ngIf="item.postType == 'VIDEO'" class="col-12 mt-3"
+                    style="height: 89vh; display: flex; flex-direction: column; background-color: white; border-radius: 10px;">
+
+                    <div>
+
+                        <!-- PP, Name, time, 3 dot -->
+                        <div class="col-12"
+                            style="display: flex; flex-direction: column; justify-content: center; justify-content: space-between;">
+                            <!-- Left Part -->
+                            <div class="col-10 d-flex">
+                                <!-- pp -->
+                                <div>
+                                    <fa-icon [icon]="faUserCircle" style="color: grey; font-size: 60px;"></fa-icon>
+                                </div>
+                                <!-- name, time -->
+                                <div class="ml-3 mt-3">
+                                    <strong>
+                                        <p>Sachin Kodag</p>
+                                    </strong>
+                                    <p>12 mins . <fa-icon [icon]="faUserFriends" style="color: grey; font-size: 15px;">
+                                        </fa-icon>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- <div class="col-2 d-flex">
+            <fa-icon [icon]="faEllipsisH" style="color: grey; font-size: 20px;"></fa-icon>
+          </div> -->
+                        </div>
+
+                        <!-- Image, Video -->
+                        <div class="col-12 ml-0 mr-0">
+                            <video [src]="item.postValueMedia" style="width: 100%; height: 300px; object-fit: cover;"
+                                controls></video>
+                        </div>
+
+                        <!-- Like, Comment, Share -->
+                        <div class="col-12 mt-2 d-flex justify-content-center">
+                            <div class="col-10" style="display: flex; justify-content: space-between;">
+                                <div style="display: flex; flex-direction: column; cursor: pointer;">
+                                    <span class="text-muted badge-light rounded p-1"
+                                        style="font-size: small; padding-left: 0px; background-color: white;">{{item.likeCount}}
+                                        Likes</span>
+                                    <span>
+                                        <div (click)="likeCount(item)" style="display: flex;">
+                                            <fa-icon [icon]="faThumbsUp" style="font-size: 20px; display: flex;">
+                                            </fa-icon>
+                                            <div style="display: flex; margin-left: 4px;">Like</div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; cursor: pointer;">
+                                    <span class="text-muted badge-light rounded p-1"
+                                        style="font-size: small; background-color: white;">{{item.commentList.length}}
+                                        Commentes</span>
+                                    <span>
+                                        <div style="display: flex;">
+                                            <fa-icon [icon]="faCommentAlt" style="font-size: 20px; display: flex;">
+                                            </fa-icon>
+                                            <div (click)="showComment()" style="display: flex; margin-left: 4px;">
+                                                Comment</div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; cursor: pointer;">
+                                    <span class="text-muted badge-light rounded p-1"
+                                        style="font-size: small; background-color: white;">{{item.shareCount}}
+                                        Shares</span>
+                                    <span>
+                                        <div (click)="shareCount(item)" style="display: flex;">
+                                            <fa-icon [icon]="faShare" style="font-size: 20px; display: flex;">
+                                            </fa-icon>
+                                            <div style="display: flex; margin-left: 4px;">Share</div>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div style="display: flex; flex-direction: column; cursor: pointer;">
+                                    <span>
+                                        <div class="mt-4">
+                                            <a (click)="deletePost(itemIndex)" style="font-size: 15px; display: flex;"
+                                                class="text-light badge badge-pill badge-danger ml-1">Delete</a>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comment -->
+                        <div class="col-12" style="display: flex; flex-direction: column;">
+                            <div>
+                                <hr style="width: 90%; margin-left: 5%;">
+                            </div>
+                            <div style="display: flex">
+                                <fa-icon [icon]="faUserCircle"
+                                    style="color: grey; font-size: 30px; padding-right: 8px;"></fa-icon>
+                                <input type="text" placeholder="  Write a comment..."
+                                    style="margin-right: 8px; width: 500px; border: none; outline: none; color: grey; border-radius: 20px; background-color: rgb(228, 228, 228);">
+                                <input (click)="addComment(item)" class="btn" type="button" value="Post"
+                                    style="color: white; background-color: rgb(44, 137, 243);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+
+            <!-- No Post Available  -->
+            <div class="col-12 mt-3"
+                style="height: 89vh; display: flex; flex-direction: column; color: tomato; justify-content: center; align-items: center; background-color: white; border-radius: 10px;"
+                *ngIf="postList.length===0">
+                NO POST AVAILABLE
+            </div>
+
+        </div>
+
+        <!-- right part -->
+        <div class="col-3 bg-light sidenavR">
+            <div class="col-12 mt-2 ml-0" style="font-weight: 500; font-size: 20px; color: rgb(180, 180, 180);">
+                <strong>Suggested</strong>
+            </div>
+            <div>
+                <!-- Card -->
+                <div class="card card-image mt-3"
+                    style="background-color: cadetblue; border-radius: 7px; width: 300px; height: 250px; object-fit: cover;">
+
+                    <!-- Content -->
+                    <div class="text-white text-center d-flex rgba-black-strong py-5 px-4"
+                        style="justify-items: start;">
+                        <div>
+                            <h5 class="pink-text"><i class="fas fa-chart-pie"></i> Groups</h5>
+                            <p>New way to find and join community</p>
+                            <input type="button" value="Find Your Groups" style="font-weight: 600; color: black;">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+            <hr>
+            <!-- Chat and messages -->
+            <strong>Contacts</strong>
+            <div class="col-12 mt-2">
+                <div>
+                    <div class="col-10 d-flex">
+                        <!-- pp -->
+                        <div>
+                            <fa-icon [icon]="faUserCircle" style="color: grey; font-size: 40px;"></fa-icon>
+                        </div>
+                        <!-- name, time -->
+                        <div class="ml-3 mt-3">
+                            <strong>
+                                <p>Sachin Kodag</p>
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-1">
+                <div>
+                    <div class="col-10 d-flex">
+                        <!-- pp -->
+                        <div>
+                            <fa-icon [icon]="faUserCircle" style="color: grey; font-size: 40px;"></fa-icon>
+                        </div>
+                        <!-- name, time -->
+                        <div class="ml-3 mt-3">
+                            <strong>
+                                <p>Rutuja Mohite</p>
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-1">
+                <div>
+                    <div class="col-10 d-flex">
+                        <!-- pp -->
+                        <div>
+                            <fa-icon [icon]="faUserCircle" style="color: grey; font-size: 40px;"></fa-icon>
+                        </div>
+                        <!-- name -->
+                        <div class="ml-3 mt-3">
+                            <strong>
+                                <p>Sachin Gardi</p>
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
