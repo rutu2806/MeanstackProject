@@ -1,0 +1,19 @@
+.fbheader{
+    height: 84px;
+    background-color: #3b5998;
+    min-width:980px;
+    color:white;
+    
+}
+
+.form-controlsetting{
+
+    height:25px!important;
+}
+
+
+select{
+    width:65px!important;
+    height: 30px!important;
+    text-align: center;
+}
